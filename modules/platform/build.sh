@@ -43,6 +43,7 @@ if [[ ! "$@" == *"--without-building" ]]; then
     npm clean-install --prefix vendor/shopware/platform/src/Administration/Resources
     npm run --prefix vendor/shopware/platform/src/Administration/Resources lerna -- bootstrap
     npm run --prefix vendor/shopware/platform/src/Administration/Resources/administration/ build
+    node vendor/shopware/platform/src/Storefront/Resources/copy-to-vendor.js
 
     npm --prefix vendor/shopware/platform/src/Storefront/Resources/ install
     npm --prefix vendor/shopware/platform/src/Storefront/Resources/ run production
