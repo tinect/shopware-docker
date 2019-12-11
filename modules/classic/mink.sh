@@ -13,7 +13,7 @@ echo "default:
         Shopware\Behat\ShopwareExtension: ~
         Behat\MinkExtension:
             ## defined in buildscript
-            base_url: 'http://$SHOPWARE_PROJECT.dev.localhost'
+            base_url: 'http://$SHOPWARE_PROJECT.sw5.tinect.de'
             default_session: 'goutte'
             javascript_session: 'selenium2'
             goutte: ~

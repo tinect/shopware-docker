@@ -83,8 +83,8 @@ This setup works for Shopware 5, Shopware 5 Composer Project and Platform
 
 ## How can i access the shop?
 
-* For Shopware 5 you can use http://**FOLDERNAME**.dev.localhost
-* For Shopware Platform you can use http://**FOLDERNAME**.platform.localhost
+* For Shopware 5 you can use http://**FOLDERNAME**.sw5.tinect.de
+* For Shopware Platform you can use http://**FOLDERNAME**.sw6.tinect.de
 * Or use `swdc open [Folder Name]`
 
 ## Can i use it on Windows / Mac?

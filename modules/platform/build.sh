@@ -9,7 +9,7 @@ cd "/var/www/html/${SHOPWARE_PROJECT}"
 
 echo "APP_ENV=docker
 APP_SECRET=8583a6ff63c5894a3195331701749943
-APP_URL=http://${SHOPWARE_PROJECT}.platform.localhost
+APP_URL=http://${SHOPWARE_PROJECT}.sw6.tinect.de
 MAILER_URL=null://localhost
 INSTANCE_ID=test
 DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD}@mysql:3306/${SHOPWARE_PROJECT}
@@ -33,7 +33,7 @@ bin/console database:migrate-destructive --all Shopware\\
 bin/console bundle:dump
 bin/console scheduled-task:register
 bin/console user:create admin --password=shopware
-bin/console sales-channel:create:storefront --url="http://${SHOPWARE_PROJECT}.platform.localhost"
+bin/console sales-channel:create:storefront --url="http://${SHOPWARE_PROJECT}.sw6.tinect.de"
 
 
 if [[ ! "$@" == *"--without-demo-data" ]]; then

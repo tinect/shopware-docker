@@ -3,7 +3,7 @@
 checkParameter
 cd "/var/www/html/${SHOPWARE_PROJECT}"
 
-URL="http://${SHOPWARE_PROJECT}.platform.localhost"
+URL="http://${SHOPWARE_PROJECT}.sw6.tinect.de"
 export PROJECT_ROOT=$SHOPWARE_FOLDER
 export APP_ENV=docker
 

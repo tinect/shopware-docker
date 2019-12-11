@@ -4,7 +4,7 @@ checkParameter
 clearCache
 
 PROJECT_ROOT="/var/www/html/$SHOPWARE_PROJECT/"
-PROJECT_URL="$SHOPWARE_PROJECT.platform.localhost"
+PROJECT_URL="$SHOPWARE_PROJECT.sw6.tinect.de"
 
 cd ${PROJECT_ROOT}
 
