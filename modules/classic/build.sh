@@ -30,7 +30,7 @@ fi
 
 clearCache
 
-./bin/console sw:database:setup --steps=setupShop --shop-url=http://$SHOPWARE_PROJECT.dev.localhost
+./bin/console sw:database:setup --steps=setupShop --shop-url=http://$SHOPWARE_PROJECT.dev.localhost.lm.local
 ./bin/console sw:snippets:to:db --include-plugins
 ./bin/console sw:theme:initialize
 ./bin/console sw:firstrunwizard:disable

@@ -15,9 +15,9 @@ function create_nginx (){
             if [[ -d "$d" ]]; then
                 NAME=$(basename $d)
                 if [[ -f "$d/public/index.php" ]]; then
-                    echo "      ${NAME}.platform.localhost: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
+                    echo "      ${NAME}.platform.localhost.lm.local: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
                 else
-                    echo "      ${NAME}.dev.localhost: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
+                    echo "      ${NAME}.dev.localhost.lm.local: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
                 fi
             fi
         done
@@ -71,9 +71,9 @@ function create_cli () {
             if [[ -d "$d" ]]; then
                 NAME=$(basename $d)
                 if [[ -f "$d/public/index.php" ]]; then
-                    echo "      - nginx:${NAME}.platform.localhost" >> ${DOCKER_OVERRIDE_FILE}
+                    echo "      - nginx:${NAME}.platform.localhost.lm.local" >> ${DOCKER_OVERRIDE_FILE}
                 else
-                    echo "      - nginx:${NAME}.dev.localhost" >> ${DOCKER_OVERRIDE_FILE}
+                    echo "      - nginx:${NAME}.dev.localhost.lm.local" >> ${DOCKER_OVERRIDE_FILE}
                 fi
             fi
         done
@@ -145,9 +145,9 @@ function create_selenium () {
         for d in ${CODE_DIRECTORY}/* ; do
             NAME=$(basename $d)
             if [[ -f "$d/public/index.php" ]]; then
-                echo "      - nginx:${NAME}.platform.localhost" >> ${DOCKER_OVERRIDE_FILE}
+                echo "      - nginx:${NAME}.platform.localhost.lm.local" >> ${DOCKER_OVERRIDE_FILE}
             else
-                echo "      - nginx:${NAME}.dev.localhost" >> ${DOCKER_OVERRIDE_FILE}
+                echo "      - nginx:${NAME}.dev.localhost.lm.local" >> ${DOCKER_OVERRIDE_FILE}
             fi
         done
     fi

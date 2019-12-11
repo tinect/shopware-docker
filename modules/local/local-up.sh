@@ -23,9 +23,9 @@ if [[ -f "${DIR}/images/custom/nginx/Dockerfile" ]]; then
         if [[ -d "$d" ]]; then
             NAME=$(basename $d)
             if [[ -f "$d/public/index.php" ]]; then
-                echo "      ${NAME}.platform.localhost: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
+                echo "      ${NAME}.platform.localhost.lm.local: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
             else
-                echo "      ${NAME}.dev.localhost: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
+                echo "      ${NAME}.dev.localhost.lm.local: 127.0.0.1" >> ${DOCKER_OVERRIDE_FILE}
             fi
         fi
     done
